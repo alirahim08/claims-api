@@ -1,4 +1,4 @@
-# Demo ASP.NET Core microservices solution
+# ASP.NET Core microservices solution
 
 ## What is this? 
 This is a transportation claims application developed using a 
