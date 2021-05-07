@@ -12,8 +12,8 @@ COPY Carriers.Api/*.csproj ./Carriers.Api/
 COPY Carriers.Services/*.csproj ./Carriers.Services/
 COPY Carriers.Services.Search.Lucene/*.csproj ./Carriers.Services.Search.Lucene/
 COPY Carriers.Domain/*.csproj ./Carriers.Domain/
-COPY Carriers.Repository/*.csproj ./Carriers.Repository/
-COPY Carriers.Repository.MySql/*.csproj ./Carriers.Repository.MySql/
+COPY Carriers.Repositories/*.csproj ./Carriers.Repositories/
+COPY Carriers.Repositories.MySql/*.csproj ./Carriers.Repositories.MySql/
 
 
 RUN dotnet restore
@@ -23,8 +23,8 @@ COPY Carriers.Api/. ./Carriers.Api/
 COPY Carriers.Services/. ./Carriers.Services/
 COPY Carriers.Services.Search.Lucene/. ./Carriers.Services.Search.Lucene/
 COPY Carriers.Domain/. ./Carriers.Domain/
-COPY Carriers.Repository/. ./Carriers.Repository/
-COPY Carriers.Repository.MySql/. ./Carriers.Repository.MySql/
+COPY Carriers.Repositories/. ./Carriers.Repositories/
+COPY Carriers.Repositories.MySql/. ./Carriers.Repositories.MySql/
 
 
 WORKDIR /app/Carriers.Api

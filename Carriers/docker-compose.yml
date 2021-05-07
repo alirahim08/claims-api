@@ -2,9 +2,11 @@ version: '3.3'
 services:
   web:
     build: .
+    image: carrier:0.1
+    container_name: carrier
     ports:
-      - "5000:5000"
-      - "5001:5001"
+      - "8080:80"
+      - "8081:443"
     depends_on:
       - db
   db:
