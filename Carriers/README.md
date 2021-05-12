@@ -6,6 +6,16 @@ microservices architetcure with apis developed in asp.net core web api
 and hosted in docker containers.
 
 ## How do setup it up?
+To run the database in docker
+```
+docker-compose -f docker-compose-mysql.yml up
+```
+
+To shutdown the db
+```
+Press Ctrl+C
+docker-compose -f docker-compose-mysql.yml down
+```
 
 ## How do I build this?
 Install docker desktop for windows

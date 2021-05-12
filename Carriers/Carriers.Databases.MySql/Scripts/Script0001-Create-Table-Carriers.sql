@@ -1,0 +1,18 @@
+﻿CREATE TABLE `carriers` (
+  `CarrierId` INT NOT NULL AUTO_INCREMENT,
+  `CarrierCode` VARCHAR(10) NOT NULL,
+  `CarrierName` VARCHAR(200) NULL,
+  `Location` VARCHAR(200) NULL,
+  `AddressLine1` VARCHAR(200) NULL,
+  `AddressLine2` VARCHAR(200) NULL,
+  `City` VARCHAR(100) NULL,
+  `State` VARCHAR(100) NULL,
+  `Zip` VARCHAR(10) NULL,
+  `Country` VARCHAR(100) NULL,
+  `Phone` VARCHAR(20) NULL,
+  `Fax` VARCHAR(20) NULL,
+  `Email` VARCHAR(100) NULL,
+  `Website` VARCHAR(100) NULL,
+  `Notes` VARCHAR(4000) NULL,
+  PRIMARY KEY (`CarrierId`),
+  UNIQUE INDEX `CarrierCode_UNIQUE` (`CarrierCode` ASC));

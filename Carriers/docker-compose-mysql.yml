@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  db:
+    image: mysql:8
+    restart: always
+    environment:
+       MYSQL_ROOT_PASSWORD: "rootpwd"
+       MYSQL_DATABASE: "carriers_db"
+       MYSQL_USER: "devuser"
+       MYSQL_PASSWORD: "devpassword"
+       MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - ./data/db:/var/lib/mysql
