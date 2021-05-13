@@ -12,6 +12,9 @@ cd Carriers
 docker-compose -f docker-compose-mysql.yml up
 ```
 
+After running the database, run the exe project `Carriers.Databases.MySql` to create the database
+
+
 To shutdown the db
 ```
 Press Ctrl+C
