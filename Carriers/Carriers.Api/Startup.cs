@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Carriers.Domain.Services;
+using Carriers.Repositories;
+using Carriers.Repositories.MySql;
+using Carriers.Services;
+using Carriers.Services.Search.Lucene;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,7 +34,15 @@ namespace Carriers.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string connectionString = Configuration.GetConnectionString("DefaultConnection")
+                .Replace("\\", "");
             
+            services.AddTransient<IDbRepositiory, MySqlRepository>(conn =>
+                new MySqlRepository(connectionString));
+            services.AddTransient<ICarrierRepository, CarrierRepository>();
+            services.AddTransient<ICarrierSearchService, CarrierSearchService>();
+            services.AddTransient<ICarrierService, CarrierService>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

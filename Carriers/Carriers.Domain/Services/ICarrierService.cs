@@ -8,7 +8,7 @@ namespace Carriers.Domain.Services
 {
     public interface ICarrierService: ICarrierSearchService
     {
-        Task<Carrier> GetCarrier(string carrierId);
+        Task<Carrier> GetCarrier(string carrierCode);
         Task SaveCarrier(Carrier carrier);
         
     }

@@ -22,9 +22,9 @@ namespace Carriers.Services
             return await _carrierSearchService.SearchCarriers(criteria);
         }
 
-        public async Task<Carrier> GetCarrier(string carrierId)
+        public async Task<Carrier> GetCarrier(string carrierCode)
         {
-            return await _carrierRepository.GetCarrier(carrierId);
+            return await _carrierRepository.GetCarrier(carrierCode);
         }
 
         public async Task SaveCarrier(Carrier carrier)

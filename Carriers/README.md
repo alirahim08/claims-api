@@ -8,6 +8,7 @@ and hosted in docker containers.
 ## How do setup it up?
 To run the database in docker
 ```
+cd Carriers
 docker-compose -f docker-compose-mysql.yml up
 ```
 
