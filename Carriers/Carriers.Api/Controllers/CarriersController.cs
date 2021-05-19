@@ -35,5 +35,20 @@ namespace Carriers.Api.Controllers
             //HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
             return await _carrierService.GetCarrier(carrierCode);
         }
+        [HttpGet]
+       // [Route("{carrierCode}")]
+        public async Task<List<Carrier>> GetCarriers(string carrierCode)
+        {
+            //HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
+            return await _carrierService.GetCarriers(carrierCode);
+        }
+
+        [HttpPut]
+        [Route("{carrierCode}")]
+        public async Task<int> DeleteCarrier(string carrierCode)
+        {
+            //HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
+            return await _carrierService.DeleteCarrier(carrierCode);
+        }
     }
 }

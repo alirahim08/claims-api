@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Carriers.Domain;
 using Carriers.Domain.Models;
@@ -30,6 +31,16 @@ namespace Carriers.Services
         public async Task SaveCarrier(Carrier carrier)
         {
             await _carrierRepository.SaveCarrier(carrier);
+        }
+
+        public async Task<List<Carrier>> GetCarriers(string carrierCode)
+        {
+            return await _carrierRepository.GetCarriers(carrierCode);
+        }
+
+        public async Task<int> DeleteCarrier(string carrierCode)
+        {
+           return await _carrierRepository.DeleteCarrier(carrierCode);
         }
     }
 }
