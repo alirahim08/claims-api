@@ -33,9 +33,9 @@ namespace Carriers.Services
             await _carrierRepository.SaveCarrier(carrier);
         }
 
-        public async Task<List<Carrier>> GetCarriers(string carrierCode)
+        public async Task<IEnumerable<Carrier>> GetCarriers()
         {
-            return await _carrierRepository.GetCarriers(carrierCode);
+            return await _carrierRepository.GetCarriers();
         }
 
         public async Task<int> DeleteCarrier(string carrierCode)

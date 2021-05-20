@@ -36,11 +36,9 @@ namespace Carriers.Api.Controllers
             return await _carrierService.GetCarrier(carrierCode);
         }
         [HttpGet]
-       // [Route("{carrierCode}")]
-        public async Task<List<Carrier>> GetCarriers(string carrierCode)
+        public async Task<IEnumerable<Carrier>> GetCarriers()
         {
-            //HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
-            return await _carrierService.GetCarriers(carrierCode);
+            return await _carrierService.GetCarriers();
         }
 
         [HttpPut]

@@ -8,7 +8,7 @@ namespace Carriers.Repositories
     {
         Task<Carrier> GetCarrier(string carrierId);
 
-        Task<List<Carrier>> GetCarriers(string carrierId);
+        Task<IEnumerable<Carrier>> GetCarriers();
 
         Task<int> DeleteCarrier(string carrierId); 
 

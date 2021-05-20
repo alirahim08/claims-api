@@ -10,6 +10,9 @@ namespace Carriers.Domain.Services
     {
         Task<Carrier> GetCarrier(string carrierCode);
         Task SaveCarrier(Carrier carrier);
-        
+
+        Task<IEnumerable<Carrier>> GetCarriers();
+        Task<int> DeleteCarrier(string carrierCode);
+
     }
 }

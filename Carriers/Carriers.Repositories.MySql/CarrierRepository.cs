@@ -18,8 +18,7 @@ namespace Carriers.Repositories.MySql
             var parameters = new DynamicParameters();
             parameters.Add("@carrier_code", carrierCode);
 
-            var query = @"Delete  FROM carriers
-           WHERE CarrierCode=@carrier_code";
+            var query = @"Delete  FROM carriers  WHERE CarrierCode=@carrier_code";
 
            return await _dbRepositiory.ExecuteAsync<int>(query, parameters);
         }
@@ -51,11 +50,8 @@ namespace Carriers.Repositories.MySql
             var carrier = await _dbRepositiory.GetFirstOrDefaultAsync<Carrier>(query, parameters);
             return carrier;
         }
-        public async Task<List<Carrier>> GetCarriers(string carrierCode)
+        public async Task<IEnumerable<Carrier>> GetCarriers()
         {
-            var parameters = new DynamicParameters();
-            parameters.Add("@carrier_code", carrierCode);
-
             var query = @"SELECT 
                             CarrierId,
                             CarrierCode,
@@ -73,9 +69,9 @@ namespace Carriers.Repositories.MySql
                             Website,
                             Notes
                         FROM carriers
-            WHERE CarrierCode=ifnull(@carrier_code,CarrierCode)";
-            var CarrierList = new List<Carrier>();
-            CarrierList = (List<Carrier>)await _dbRepositiory.GetListAsync<Carrier>(query, parameters);
+            ORDER BY CarrierName";
+            
+            var CarrierList = await _dbRepositiory.GetListAsync<Carrier>(query);
             return CarrierList;
         }
         public async Task<Task> SaveCarrier(Carrier carrier)
