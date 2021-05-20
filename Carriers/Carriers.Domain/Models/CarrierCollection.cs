@@ -4,6 +4,6 @@ namespace Carriers.Domain.Models
 {
     public class CarrierCollection
     {
-        private ICollection<Carrier> Carriers{get;set;}
+        public ICollection<Carrier> Carriers{get;set;}
     }
 }
