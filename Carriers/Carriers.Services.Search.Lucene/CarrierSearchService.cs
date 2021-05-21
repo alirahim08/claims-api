@@ -18,8 +18,8 @@ namespace Carriers.Services.Search.Lucene
         public CarrierSearchService(string indexPath)
         {
             _indexPath = indexPath;
-            var reader = DirectoryReader.Open(FSDirectory.Open(_indexPath));
-            _indexSearcher = new IndexSearcher(reader);
+            //var reader = DirectoryReader.Open(FSDirectory.Open(_indexPath));
+            //_indexSearcher = new IndexSearcher(reader);
         }
 
         public Task<CarrierCollection> SearchCarriers(CarrierSearchCriteria criteria)

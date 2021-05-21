@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Carriers.Api.Configuration;
 using Carriers.Domain.Services;
 using Carriers.Repositories;
 using Carriers.Repositories.MySql;
@@ -18,6 +19,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
 namespace Carriers.Api
@@ -37,10 +39,16 @@ namespace Carriers.Api
             string connectionString = Configuration.GetConnectionString("DefaultConnection")
                 .Replace("\\", "");
             
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.AddTransient<IDbRepositiory, MySqlRepository>(conn =>
                 new MySqlRepository(connectionString));
             services.AddTransient<ICarrierRepository, CarrierRepository>();
-            services.AddTransient<ICarrierSearchService, CarrierSearchService>();
+            services.AddTransient<ICarrierSearchService>(x =>
+            {
+                var appSettings = x.GetService<IOptions<AppSettings>>();
+                return new CarrierSearchService(appSettings?.Value.IndexPath);
+            });
+             
             services.AddTransient<ICarrierService, CarrierService>();
 
             services.AddControllers();
