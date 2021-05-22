@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Identity.Web.Resource;
+using Newtonsoft.Json;
 
 namespace Carriers.Api.Controllers
 {
@@ -41,12 +42,29 @@ namespace Carriers.Api.Controllers
             return await _carrierService.GetCarriers();
         }
 
-        [HttpPut]
+        [HttpDelete]
         [Route("{carrierCode}")]
         public async Task<int> DeleteCarrier(string carrierCode)
         {
             //HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
             return await _carrierService.DeleteCarrier(carrierCode);
+        }
+
+        [HttpPost]
+        [Route("{jsonCarrier}")]
+        public async Task<int> SaveCarrier(string jsonCarrier)
+        {
+
+            //HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
+            return await _carrierService.SaveCarrier(JsonConvert.DeserializeObject<Carrier>(jsonCarrier));
+        }
+
+        [HttpPut]
+        [Route("{jsonCarrier}")]
+        public async Task<int> UpdateCarrier(string jsonCarrier)
+        {
+            //HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
+            return await _carrierService.UpdateCarrier(JsonConvert.DeserializeObject<Carrier>(jsonCarrier));
         }
     }
 }
