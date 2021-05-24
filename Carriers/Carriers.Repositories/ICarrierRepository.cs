@@ -12,6 +12,9 @@ namespace Carriers.Repositories
 
         Task<int> DeleteCarrier(string carrierId); 
 
-        Task<Task> SaveCarrier(Carrier carrier);
+        Task<int> SaveCarrier(Carrier carrier);
+
+        Task<int> UpdateCarrier(Carrier carrier);
+
     }
 }
