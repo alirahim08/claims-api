@@ -1,0 +1,36 @@
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Carriers.Domain;
+using Carriers.Domain.Models;
+using Carriers.Domain.Services;
+using Carriers.Repositories;
+
+namespace Carriers.Services
+{
+    public class ContactService : IContactService
+    {
+        private readonly IContactSearchService _contactSearchService;
+        private readonly IContactRepository _contactRepository;
+
+        public ContactService(IContactSearchService contactSearchService, IContactRepository contactRepository)
+        {
+            this._contactSearchService = contactSearchService;
+            this._contactRepository = contactRepository;
+        }
+
+        public async Task<ContactCollection> SearchContact(ContactSearchCriteria criteria)
+        {
+            return await _contactSearchService.SearchContact(criteria);
+        }
+
+        public async Task<IEnumerable<Contact>> GetContacts(string carrierCode)
+        {
+            return await _contactRepository.GetContacts(carrierCode);
+        }
+
+        public async Task<Contact> GetContact(int contactId)
+        {
+            return await _contactRepository.GetContact(contactId);
+        }
+    }
+}

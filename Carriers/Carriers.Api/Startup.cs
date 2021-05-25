@@ -51,6 +51,10 @@ namespace Carriers.Api
              
             services.AddTransient<ICarrierService, CarrierService>();
 
+            services.AddTransient<IContactRepository, ContactRepository>();
+            services.AddTransient<IContactSearchService, ContactSearchService>();
+            services.AddTransient<IContactService, ContactService>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

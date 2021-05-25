@@ -148,7 +148,7 @@ namespace Carriers.Api.Controllers
             _logger.LogDebug($"[CarriersController:UpdateCarrier] Carrier: {JsonConvert.SerializeObject(carrier)}");
             
             // service
-            await _carrierService.SaveCarrier(carrier);
+            await _carrierService.UpdateCarrier(carrier);
 
             // response
             _logger.LogDebug($"Carrier with carrier code: {carrier.CarrierCode} updated");
