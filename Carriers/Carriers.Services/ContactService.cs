@@ -32,5 +32,24 @@ namespace Carriers.Services
         {
             return await _contactRepository.GetContact(contactId);
         }
+
+        public async Task<int> DeleteContact(int contactId)
+        {
+            return await _contactRepository.DeleteContact(contactId);
+        }
+
+    
+
+        public async Task<int> UpdateContact(Contact contact)
+        {
+            return await _contactRepository.UpdateContact(contact);
+        }
+
+        public async Task<int> SaveContact(Contact contact)
+        {
+            return await _contactRepository.SaveContact(contact);
+        }
+
+      
     }
 }

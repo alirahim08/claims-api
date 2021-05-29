@@ -62,5 +62,39 @@ namespace Carriers.Api.Controllers
 
             return await _contactService.GetContact(contactId);
         }
+
+        [HttpDelete]
+        [Route("{ContactId}")]
+        public async Task<int> DeleteContact(int ContactId)
+        {
+            //HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
+            _logger.LogDebug($"[ContactController:DeleteContact] ContactId: {ContactId}");
+
+            // input validation
+           
+            // service
+          return  await _contactService.DeleteContact(ContactId);
+
+          
+        }
+
+        [HttpPost]
+        [Route("{jsonContact}")]
+        public async Task<int> SaveContact(string jsonContact)
+        {
+
+            //HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
+            return await _contactService.SaveContact(JsonConvert.DeserializeObject<Contact>(jsonContact));
+        }
+
+        [HttpPut]
+        [Route("{jsonContact}")]
+        public async Task<int> UpdateContact(string jsonContact)
+        {
+            //HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
+            return await _contactService.UpdateContact(JsonConvert.DeserializeObject<Contact>(jsonContact));
+        }
     }
+
 }
+

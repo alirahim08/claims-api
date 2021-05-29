@@ -7,10 +7,12 @@
 
   <ItemGroup>
     <None Remove="Scripts\Script0001-Create-Table-Carriers.sql" />
+    <None Remove="Scripts\Script0003-Add-Contact.sql" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Scripts\Script0001-Create-Table-Carriers.sql" />
+    <EmbeddedResource Include="Scripts\Script0003-Add-Contact.sql" />
     <EmbeddedResource Include="Scripts\Script0002-Add-Carriers-Test-Data.sql" />
   </ItemGroup>
 
