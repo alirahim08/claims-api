@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Carriers.Domain;
@@ -9,18 +10,16 @@ namespace Carriers.Services
 {
     public class CarrierService: ICarrierService
     {
-        private readonly ICarrierSearchService _carrierSearchService;
         private readonly ICarrierRepository _carrierRepository;
 
         public CarrierService(ICarrierSearchService carrierSearchService, ICarrierRepository carrierRepository )
         {
-            this._carrierSearchService = carrierSearchService;
             this._carrierRepository = carrierRepository;
         }
 
         public async Task<CarrierCollection> SearchCarriers(CarrierSearchCriteria criteria)
         {
-            return await _carrierSearchService.SearchCarriers(criteria);
+            throw new NotImplementedException();
         }
 
         public async Task<Carrier> GetCarrier(string carrierCode)

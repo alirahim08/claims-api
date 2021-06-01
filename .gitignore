@@ -12,6 +12,9 @@
 
 .idea
 
+**.terraform**
+
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

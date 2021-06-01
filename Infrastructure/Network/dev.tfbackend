@@ -1,0 +1,5 @@
+﻿bucket          = "claims-terraform-state"
+dynamodb_table  = "claims-terraform-state"
+key             = "app-network-dev"
+region          = "us-east-1"
+encrypt         = "true"

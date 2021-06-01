@@ -9,3 +9,5 @@ variable "vpc_name" {
 variable "resource_prefix" {
   default = ""
 }
+
+variable "vpc_cidr_ip_block" {}

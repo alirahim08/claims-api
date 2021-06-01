@@ -1,25 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Carriers.Api.Configuration;
 using Carriers.Domain.Services;
 using Carriers.Repositories;
 using Carriers.Repositories.MySql;
 using Carriers.Services;
-using Carriers.Services.Search.Lucene;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Identity.Web;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
 namespace Carriers.Api
@@ -43,16 +31,11 @@ namespace Carriers.Api
             services.AddTransient<IDbRepositiory, MySqlRepository>(conn =>
                 new MySqlRepository(connectionString));
             services.AddTransient<ICarrierRepository, CarrierRepository>();
-            services.AddTransient<ICarrierSearchService>(x =>
-            {
-                var appSettings = x.GetService<IOptions<AppSettings>>();
-                return new CarrierSearchService(appSettings?.Value.IndexPath);
-            });
+            
              
             services.AddTransient<ICarrierService, CarrierService>();
 
             services.AddTransient<IContactRepository, ContactRepository>();
-            services.AddTransient<IContactSearchService, ContactSearchService>();
             services.AddTransient<IContactService, ContactService>();
 
             services.AddControllers();

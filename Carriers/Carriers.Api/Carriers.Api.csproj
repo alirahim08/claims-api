@@ -19,7 +19,6 @@
       <ProjectReference Include="..\Carriers.Domain\Carriers.Domain.csproj" />
       <ProjectReference Include="..\Carriers.Repositories.MySql\Carriers.Repositories.MySql.csproj" />
       <ProjectReference Include="..\Carriers.Repositories\Carriers.Repositories.csproj" />
-      <ProjectReference Include="..\Carriers.Services.Search.Lucene\Carriers.Services.Search.Lucene.csproj" />
       <ProjectReference Include="..\Carriers.Services\Carriers.Services.csproj" />
     </ItemGroup>
 

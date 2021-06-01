@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Carriers.Domain;
 using Carriers.Domain.Models;
@@ -9,18 +10,16 @@ namespace Carriers.Services
 {
     public class ContactService : IContactService
     {
-        private readonly IContactSearchService _contactSearchService;
         private readonly IContactRepository _contactRepository;
 
         public ContactService(IContactSearchService contactSearchService, IContactRepository contactRepository)
         {
-            this._contactSearchService = contactSearchService;
             this._contactRepository = contactRepository;
         }
 
         public async Task<ContactCollection> SearchContact(ContactSearchCriteria criteria)
         {
-            return await _contactSearchService.SearchContact(criteria);
+            throw new NotImplementedException();
         }
 
         public async Task<IEnumerable<Contact>> GetContacts(string carrierCode)
@@ -38,8 +37,6 @@ namespace Carriers.Services
             return await _contactRepository.DeleteContact(contactId);
         }
 
-    
-
         public async Task<int> UpdateContact(Contact contact)
         {
             return await _contactRepository.UpdateContact(contact);
@@ -49,7 +46,5 @@ namespace Carriers.Services
         {
             return await _contactRepository.SaveContact(contact);
         }
-
-      
     }
 }
