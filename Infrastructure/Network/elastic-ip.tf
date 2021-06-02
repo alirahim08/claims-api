@@ -1,7 +1,7 @@
-﻿resource "aws_eip" "eip_2a" {
-  vpc = aws_vpc.application_vpc.id
+﻿resource "aws_eip" "eip_1a" {
+  vpc = true
 }
 
-resource "aws_eip" "eip_2b" {
-  vpc = aws_vpc.application_vpc.id
+resource "aws_eip" "eip_1b" {
+    vpc = true
 }
