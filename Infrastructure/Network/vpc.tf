@@ -6,6 +6,6 @@
   instance_tenancy = "default"
 
   tags = {
-    Name = var.vpc_name
+    Name = "${var.resource_prefix}-vpc"
   }
 }

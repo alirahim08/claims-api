@@ -2,12 +2,7 @@
   default = "us-east-1"
 }
 
-variable "vpc_name" {
-  default = "claims-dev-vpc"
-}
-
-variable "resource_prefix" {
-  default = ""
-}
-
+variable "resource_prefix" {}
 variable "vpc_cidr_ip_block" {}
+variable "api_dns_zone" {}
+variable "environment" {}
