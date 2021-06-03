@@ -4,7 +4,7 @@
   map_public_ip_on_launch = "false"
   availability_zone = "us-east-1a"
   tags = {
-    Name = "${var.resource_prefix}subnet-pub-1a"
+    Name = "${var.resource_prefix}-subnet-pub-1a"
   }
 }
 
@@ -14,7 +14,7 @@ resource "aws_subnet" "public_1b" {
   map_public_ip_on_launch = "false"
   availability_zone = "us-east-1b"
   tags = {
-    Name = "${var.resource_prefix}subnet-pub-1b"
+    Name = "${var.resource_prefix}-subnet-pub-1b"
   }
 }
 
@@ -24,7 +24,7 @@ resource "aws_subnet" "private_1a" {
   map_public_ip_on_launch = "false"
   availability_zone = "us-east-1a"
   tags = {
-    Name = "${var.resource_prefix}subnet-pvt-1a"
+    Name = "${var.resource_prefix}-subnet-pvt-1a"
   }
 }
 
@@ -34,7 +34,7 @@ resource "aws_subnet" "private_1b" {
   map_public_ip_on_launch = "false"
   availability_zone = "us-east-1b"
   tags = {
-    Name = "${var.resource_prefix}subnet-pvt-1b"
+    Name = "${var.resource_prefix}-subnet-pvt-1b"
   }
 }
 
@@ -45,7 +45,7 @@ resource "aws_subnet" "private_web_1a" {
   availability_zone = "us-east-1a"
 
   tags = {
-    Name = "${var.resource_prefix}subnet-pvt-web-1a"
+    Name = "${var.resource_prefix}-subnet-pvt-web-1a"
   }
 }
 
@@ -55,6 +55,6 @@ resource "aws_subnet" "private_web_1b" {
   map_public_ip_on_launch = "false"
   availability_zone = "us-east-1b"
   tags = {
-    Name = "${var.resource_prefix}subnet-pvt-web-1b"
+    Name = "${var.resource_prefix}-subnet-pvt-web-1b"
   }
 }

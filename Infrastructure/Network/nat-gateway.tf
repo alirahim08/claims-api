@@ -4,7 +4,7 @@
 
   depends_on = [aws_internet_gateway.main_internet_gateway, aws_subnet.private_1a]
   tags = {
-    Name = "${var.resource_prefix}sub-pub-1a-nat"
+    Name = "${var.resource_prefix}-sub-pub-1a-nat"
   }
 }
 
@@ -14,6 +14,6 @@ resource "aws_nat_gateway" "nat_gateway_1b" {
 
   depends_on = [aws_internet_gateway.main_internet_gateway,aws_subnet.private_1b]
   tags = {
-    Name = "${var.resource_prefix}sub-pub-1b-nat"
+    Name = "${var.resource_prefix}-sub-pub-1b-nat"
   }
 }

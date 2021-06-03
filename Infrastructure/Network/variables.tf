@@ -3,7 +3,7 @@
 }
 
 variable "vpc_name" {
-  default = "app-vpc"
+  default = "claims-dev-vpc"
 }
 
 variable "resource_prefix" {
