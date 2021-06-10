@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>aspnet-InsuranceProviders.Api-E4B82305-137A-438F-873A-7CC1F0281284</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.4" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.4" />
+        <PackageReference Include="Microsoft.Identity.Web" Version="1.1.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\InsuranceProviders.Databases.MySql\InsuranceProviders.Databases.MySql.csproj" />
+      <ProjectReference Include="..\InsuranceProviders.Domain\InsuranceProviders.Domain.csproj" />
+      <ProjectReference Include="..\InsuranceProviders.Repositories.MySql\InsuranceProviders.Repositories.MySql.csproj" />
+      <ProjectReference Include="..\InsuranceProviders.Repositories\InsuranceProviders.Repositories.csproj" />
+      <ProjectReference Include="..\InsuranceProviders.Services.Search.Lucene\InsuranceProviders.Services.Search.Lucene.csproj" />
+      <ProjectReference Include="..\InsuranceProviders.Services\InsuranceProviders.Services.csproj" />
+    </ItemGroup>
+
+</Project>
