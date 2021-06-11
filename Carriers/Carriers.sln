@@ -23,7 +23,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carriers.Databases.MySql", "Carriers.Databases.MySql\Carriers.Databases.MySql.csproj", "{4053A71A-C74E-46D9-ACCD-CB12648E22EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carriers.Databases.MySql", "Carriers.Databases.MySql\Carriers.Databases.MySql.csproj", "{4053A71A-C74E-46D9-ACCD-CB12648E22EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InsuranceProviders", "InsuranceProviders", "{25DFB14E-0CCF-4A15-83DB-E64B8CF5413F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceProviders.Api", "..\InsuranceProviders\InsuranceProviders.Api\InsuranceProviders.Api.csproj", "{F5B66D1D-5FE7-4519-9B35-B4D1A74666BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceProviders.Databases.MySql", "..\InsuranceProviders\InsuranceProviders.Databases.MySql\InsuranceProviders.Databases.MySql.csproj", "{095C8037-792E-4347-8AD4-46AE4A681718}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceProviders.Domain", "..\InsuranceProviders\InsuranceProviders.Domain\InsuranceProviders.Domain.csproj", "{412209CF-21E4-4C6C-863C-FA7B82FBA45B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceProviders.Repositories", "..\InsuranceProviders\InsuranceProviders.Repositories\InsuranceProviders.Repositories.csproj", "{B00BE506-9EC7-418F-8B63-0DB1E3FFBE60}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceProviders.Repositories.MySql", "..\InsuranceProviders\InsuranceProviders.Repositories.MySql\InsuranceProviders.Repositories.MySql.csproj", "{E9E93D77-92B4-4432-8DC1-5E2A5A75EDE5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceProviders.Services", "..\InsuranceProviders\InsuranceProviders.Services\InsuranceProviders.Services.csproj", "{C4E251E4-7B84-4A76-9B98-EC54A0BE974D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsuranceProviders.Services.Search.Lucene", "..\InsuranceProviders\InsuranceProviders.Services.Search.Lucene\InsuranceProviders.Services.Search.Lucene.csproj", "{EF0097D7-7D52-4D91-B0DC-3F8B2C6ABC86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +71,34 @@ Global
 		{4053A71A-C74E-46D9-ACCD-CB12648E22EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4053A71A-C74E-46D9-ACCD-CB12648E22EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4053A71A-C74E-46D9-ACCD-CB12648E22EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B66D1D-5FE7-4519-9B35-B4D1A74666BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B66D1D-5FE7-4519-9B35-B4D1A74666BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B66D1D-5FE7-4519-9B35-B4D1A74666BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B66D1D-5FE7-4519-9B35-B4D1A74666BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095C8037-792E-4347-8AD4-46AE4A681718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095C8037-792E-4347-8AD4-46AE4A681718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095C8037-792E-4347-8AD4-46AE4A681718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095C8037-792E-4347-8AD4-46AE4A681718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{412209CF-21E4-4C6C-863C-FA7B82FBA45B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{412209CF-21E4-4C6C-863C-FA7B82FBA45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{412209CF-21E4-4C6C-863C-FA7B82FBA45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{412209CF-21E4-4C6C-863C-FA7B82FBA45B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00BE506-9EC7-418F-8B63-0DB1E3FFBE60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00BE506-9EC7-418F-8B63-0DB1E3FFBE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00BE506-9EC7-418F-8B63-0DB1E3FFBE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00BE506-9EC7-418F-8B63-0DB1E3FFBE60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9E93D77-92B4-4432-8DC1-5E2A5A75EDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E93D77-92B4-4432-8DC1-5E2A5A75EDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9E93D77-92B4-4432-8DC1-5E2A5A75EDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9E93D77-92B4-4432-8DC1-5E2A5A75EDE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E251E4-7B84-4A76-9B98-EC54A0BE974D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E251E4-7B84-4A76-9B98-EC54A0BE974D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E251E4-7B84-4A76-9B98-EC54A0BE974D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E251E4-7B84-4A76-9B98-EC54A0BE974D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF0097D7-7D52-4D91-B0DC-3F8B2C6ABC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0097D7-7D52-4D91-B0DC-3F8B2C6ABC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0097D7-7D52-4D91-B0DC-3F8B2C6ABC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF0097D7-7D52-4D91-B0DC-3F8B2C6ABC86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +110,13 @@ Global
 		{6533AB95-791C-4320-A95D-2D5CFF7958D2} = {4F644AC7-C910-43CA-80A0-CB6976AE52CF}
 		{DDF34929-E066-4239-82D0-F1C7A7A8ACC5} = {4F644AC7-C910-43CA-80A0-CB6976AE52CF}
 		{4053A71A-C74E-46D9-ACCD-CB12648E22EA} = {4F644AC7-C910-43CA-80A0-CB6976AE52CF}
+		{F5B66D1D-5FE7-4519-9B35-B4D1A74666BC} = {25DFB14E-0CCF-4A15-83DB-E64B8CF5413F}
+		{095C8037-792E-4347-8AD4-46AE4A681718} = {25DFB14E-0CCF-4A15-83DB-E64B8CF5413F}
+		{412209CF-21E4-4C6C-863C-FA7B82FBA45B} = {25DFB14E-0CCF-4A15-83DB-E64B8CF5413F}
+		{B00BE506-9EC7-418F-8B63-0DB1E3FFBE60} = {25DFB14E-0CCF-4A15-83DB-E64B8CF5413F}
+		{E9E93D77-92B4-4432-8DC1-5E2A5A75EDE5} = {25DFB14E-0CCF-4A15-83DB-E64B8CF5413F}
+		{C4E251E4-7B84-4A76-9B98-EC54A0BE974D} = {25DFB14E-0CCF-4A15-83DB-E64B8CF5413F}
+		{EF0097D7-7D52-4D91-B0DC-3F8B2C6ABC86} = {25DFB14E-0CCF-4A15-83DB-E64B8CF5413F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35D6E982-2472-4620-8EB2-B544033C7472}

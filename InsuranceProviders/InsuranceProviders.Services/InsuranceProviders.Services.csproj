@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\InsuranceProviders.Domain\InsuranceProviders.Domain.csproj" />
+      <ProjectReference Include="..\InsuranceProviders.Repositories\InsuranceProviders.Repositories.csproj" />
+    </ItemGroup>
+
+</Project>
