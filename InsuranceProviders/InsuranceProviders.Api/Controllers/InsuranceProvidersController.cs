@@ -100,7 +100,7 @@ namespace InsuranceProviders.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Domain.Models.InsuranceProvider>> Saveinsuranceprovider([FromBody] Domain.Models.InsuranceProvider insuranceProvider)
+        public async Task<ActionResult<InsuranceProvider>> Saveinsuranceprovider([FromBody] InsuranceProvider insuranceProvider)
         {
             // input validation
             if(insuranceProvider == null)
@@ -130,7 +130,7 @@ namespace InsuranceProviders.Api.Controllers
 
         [HttpPut]
         [Route("{insuranceProviderCode}")]
-        public async Task<ActionResult<Domain.Models.InsuranceProvider>> Updateinsuranceprovider(string insuranceProviderCode, [FromBody] Domain.Models.InsuranceProvider insuranceProvider)
+        public async Task<ActionResult<InsuranceProvider>> Updateinsuranceprovider(string insuranceProviderCode, [FromBody] InsuranceProvider insuranceProvider)
         {
             // input validation
             if(insuranceProvider == null)
